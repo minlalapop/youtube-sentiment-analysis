@@ -1,8 +1,38 @@
+# Virtual environments and local secrets
+.venv/
 venv/
-__pycache__/
-*.pyc
+env/
 .env
-.DS_Store
+.env.*
+!.env.example
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Packaging and build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
 logs/
+
+# Editors and operating-system files
+.vscode/
+.idea/
+.DS_Store
+
+# Generated/local datasets
 data/raw/
 data/processed/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
