@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Sentiment Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="brand">
+                <div class="logo">YT</div>
+                <div>
+                    <h1>YouTube Sentiment Analyzer</h1>
+                    <span>Analyse de sentiment</span>
+                </div>
+            </div>
+
+            <button id="themeBtn" class="icon-btn" title="Changer le thème">
+                ◐
+            </button>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2>Analyse des commentaires</h2>
+                <p>
+                    Analysez les commentaires de la vidéo
+                    YouTube et consultez les résultats.
+                </p>
+            </section>
+
+            <button id="analyzeBtn" class="primary-btn">
+                Lancer l'analyse
+            </button>
+
+            <p id="status" role="status"></p>
+
+            <section id="results" hidden>
+
+                <div class="section-header">
+                    <h3>Répartition des sentiments</h3>
+                    <span id="totalCount"></span>
+                </div>
+
+                <div id="stats" class="stats-grid"></div>
+
+                <div class="chart">
+                    <div id="chartBar" class="chart-bar"></div>
+                    <div class="chart-legend">
+                        <span>Positif</span>
+                        <span>Neutre</span>
+                        <span>Négatif</span>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h3>Commentaires analysés</h3>
+                    <button id="copyBtn" class="text-btn">
+                        Copier
+                    </button>
+                </div>
+
+                <select id="filterSelect">
+                    <option value="all">Tous les sentiments</option>
+                    <option value="positive">Positifs</option>
+                    <option value="neutral">Neutres</option>
+                    <option value="negative">Négatifs</option>
+                </select>
+
+                <div id="commentList"></div>
+
+            </section>
+        </main>
+
+        <footer>
+            YouTube Sentiment Analyzer · ML
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
